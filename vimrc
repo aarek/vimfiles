@@ -26,7 +26,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'myusuf3/numbers.vim'
+"NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
@@ -73,6 +73,9 @@ set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
 
 set title
 
+set relativenumber
+set number
+
 " swap directory
 "set directory=~/.vimswp
 
@@ -82,8 +85,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+"set t_Co=256
+
 " Airline
-set t_Co=256
 set laststatus=2
 "let g:airline_powerline_fonts=1
 
@@ -104,10 +108,6 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': '\.git$\|\.hg$\|\.svn$\|vendor\|node_modules$\|target$\|project$',
   \ 'file': '\v\.(exe|so|dll|log|png|jpeg|jpg)$',
   \ }
-
-" Numbers.vim settings
-let g:numbers_exclude = ['tagbar', 'nerdtree']
-nnoremap <F3> :NumbersToggle<CR>
 
 " Tagbar
 nmap <Leader>t :TagbarToggle<CR>
