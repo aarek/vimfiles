@@ -10,15 +10,6 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Required
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Required
-filetype plugin indent on
-
-syntax enable
-set encoding=utf-8
-set showcmd
-set cursorline
-set wildmenu
-set showmatch
 
 " My Bundles
 NeoBundle 'tpope/vim-fugitive'
@@ -58,6 +49,16 @@ NeoBundle 'matze/vim-move'
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
+
+" Required
+filetype plugin indent on
+
+syntax enable
+set encoding=utf-8
+set showcmd
+set cursorline
+set wildmenu
+set showmatch
 
 set mouse=a
 
