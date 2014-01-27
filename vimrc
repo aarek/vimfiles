@@ -70,7 +70,10 @@ set smarttab
 set autoindent
 set backspace=indent,eol,start
 set list
-set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
+"set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
+set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮
+
+set shell=bash
 
 set title
 
@@ -140,6 +143,8 @@ vmap <Leader>t= :Tabularize /^[^=]*\zs=<CR>
 nmap <Leader>t: :Tabularize /:\zs<CR>
 vmap <Leader>t: :Tabularize /:\zs<CR>
 
+" smartgf
+let g:smartgf_enable_gems_search = 0
 
 " tabs
 map <C-S-Right> :tabn<CR>
