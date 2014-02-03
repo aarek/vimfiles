@@ -10,14 +10,13 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 " Required
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-
 " My Bundles
+NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'scrooloose/nerdtree'
-"NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
@@ -26,17 +25,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'ervandew/supertab'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'majutsushi/tagbar'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'tpope/vim-git'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'pangloss/vim-javascript'
-"NeoBundle 'groenwege/vim-less'
-NeoBundle 'cakebaker/scss-syntax.vim'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'rosstimson/scala-vim-support'
 NeoBundle 'rking/ag.vim'
-"NeoBundle 'mileszs/ack.vim'
 NeoBundle 'gorkunov/smartgf.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'Townk/vim-autoclose'
@@ -44,7 +33,17 @@ NeoBundle 'morhetz/gruvbox'
 NeoBundle 'gre/play2vim'
 NeoBundle 'kablamo/vim-git-log'
 NeoBundle 'airblade/vim-gitgutter'
+"NeoBundle 'myusuf3/numbers.vim'
+"NeoBundle 'groenwege/vim-less'
+"NeoBundle 'mileszs/ack.vim'
 NeoBundle 'matze/vim-move'
+NeoBundleLazy 'tpope/vim-markdown',           { 'autoload': { 'filetypes': ['markdown'] } }
+NeoBundleLazy 'kchmck/vim-coffee-script',     { 'autoload': { 'filetypes': ['coffee'] } }
+NeoBundleLazy 'tpope/vim-haml',               { 'autoload': { 'filetypes': ['haml'] } }
+NeoBundleLazy 'pangloss/vim-javascript',      { 'autoload': { 'filetypes': ['javascript'] } }
+NeoBundleLazy 'cakebaker/scss-syntax.vim',    { 'autoload': { 'filetypes': ['scss'] } }
+NeoBundleLazy 'vim-ruby/vim-ruby',            { 'autoload': { 'filetypes': ['ruby'] } }
+NeoBundleLazy 'rosstimson/scala-vim-support', { 'autoload': { 'filetypes': ['scala'] } }
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
