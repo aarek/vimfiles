@@ -44,6 +44,7 @@ NeoBundleLazy 'pangloss/vim-javascript',      { 'autoload': { 'filetypes': ['jav
 NeoBundleLazy 'cakebaker/scss-syntax.vim',    { 'autoload': { 'filetypes': ['scss'] } }
 NeoBundleLazy 'vim-ruby/vim-ruby',            { 'autoload': { 'filetypes': ['ruby'] } }
 NeoBundleLazy 'rosstimson/scala-vim-support', { 'autoload': { 'filetypes': ['scala'] } }
+NeoBundleLazy 'dag/vim2hs',                   { 'autoload': { 'filetypes': ['haskell'] } }
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
@@ -145,6 +146,9 @@ vmap <Leader>t: :Tabularize /:\zs<CR>
 " smartgf
 let g:smartgf_enable_gems_search = 0
 
+" let gist-vim copy to clipboard on mac
+let g:gist_clip_command = 'pbcopy'
+
 " tabs
 map <C-S-Right> :tabn<CR>
 map <C-S-Left> :tabp<CR>
@@ -156,6 +160,7 @@ nmap <silent> <Leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 set tags+=.git/tags
 
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
+autocmd BufNewFile,BufRead *.yml set filetype=yaml
 
 set bg=dark
 colorscheme gruvbox
