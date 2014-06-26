@@ -6,6 +6,29 @@ endif
 " Required
 call neobundle#rc(expand('~/.vim/bundle/'))
 
+" Required
+filetype plugin indent on
+
+set encoding=utf-8
+set showcmd
+set cursorline
+set wildmenu
+set showmatch
+
+set mouse=a
+
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+set autoindent
+set backspace=indent,eol,start
+set list
+set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮
+
+set noswapfile
+
 " Let NeoBundle manage NeoBundle
 " Required
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -33,10 +56,10 @@ NeoBundle 'morhetz/gruvbox'
 NeoBundle 'gre/play2vim'
 NeoBundle 'kablamo/vim-git-log'
 NeoBundle 'airblade/vim-gitgutter'
-"NeoBundle 'myusuf3/numbers.vim'
 "NeoBundle 'groenwege/vim-less'
 "NeoBundle 'mileszs/ack.vim'
 NeoBundle 'matze/vim-move'
+NeoBundle 'gcmt/wildfire.vim'
 NeoBundleLazy 'tpope/vim-markdown',           { 'autoload': { 'filetypes': ['markdown'] } }
 NeoBundleLazy 'kchmck/vim-coffee-script',     { 'autoload': { 'filetypes': ['coffee'] } }
 NeoBundleLazy 'tpope/vim-haml',               { 'autoload': { 'filetypes': ['haml'] } }
@@ -45,33 +68,13 @@ NeoBundleLazy 'cakebaker/scss-syntax.vim',    { 'autoload': { 'filetypes': ['scs
 NeoBundleLazy 'vim-ruby/vim-ruby',            { 'autoload': { 'filetypes': ['ruby'] } }
 NeoBundleLazy 'rosstimson/scala-vim-support', { 'autoload': { 'filetypes': ['scala'] } }
 NeoBundleLazy 'dag/vim2hs',                   { 'autoload': { 'filetypes': ['haskell'] } }
+NeoBundleLazy 'derekwyatt/vim-sbt',           { 'autoload': { 'filetypes': ['sbt'] } }
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-" Required
-filetype plugin indent on
-
 syntax enable
-set encoding=utf-8
-set showcmd
-set cursorline
-set wildmenu
-set showmatch
-
-set mouse=a
-
-set nowrap
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set smarttab
-set autoindent
-set backspace=indent,eol,start
-set list
-"set listchars=tab:▸\ ,trail:•,extends:❯,precedes:❮
-set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮
 
 set shell=bash
 
@@ -112,6 +115,8 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': '\.git$\|\.hg$\|\.svn$\|vendor\|node_modules$\|target$\|project$',
   \ 'file': '\v\.(exe|so|dll|log|png|jpeg|jpg)$',
   \ }
+
+let g:ctrlp_max_files=0
 
 " Tagbar
 nmap <Leader>t :TagbarToggle<CR>
