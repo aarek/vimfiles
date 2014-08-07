@@ -162,10 +162,14 @@ map <C-n> :tabnew<CR>
 " find merge conflict markers
 nmap <silent> <Leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
 set tags+=.git/tags
 
 autocmd BufNewFile,BufRead *.thor set filetype=ruby
 autocmd BufNewFile,BufRead *.yml set filetype=yaml
+autocmd BufNewFile,BufRead *.html set filetype=html
+autocmd BufNewFile,BufRead *.js set filetype=javascript
 
 set bg=dark
 colorscheme gruvbox
